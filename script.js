@@ -4,7 +4,7 @@ navigator.mediaDevices.getUserMedia({
 }).then(stream => {
   document.getElementById('camera').srcObject = stream;
 });
-å
+
 let lastPhotoData = null;
 
 // 撮影処理
@@ -26,6 +26,14 @@ document.getElementById('capture').onclick = () => {
   document.getElementById('preview').src = lastPhotoData;
   document.getElementById('camera-container').style.display = "none";
   document.getElementById('preview-container').style.display = "block";
+};
+
+// 保存
+document.getElementById('save').onclick = () => {
+  const link = document.createElement('a');
+  link.href = lastPhotoData;
+  link.download = 'photo.png';
+  link.click();
 };
 
 // 撮り直し

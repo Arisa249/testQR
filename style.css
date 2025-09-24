@@ -16,21 +16,25 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   pointer-events: none;
-}
-
-#h3 {
-	font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "sans-serif";
 }
 
 #capture {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 10px 20px;
-  font-size: 1.2em;
+  font-size: 1.5rem;
+  padding: 15px 40px;
+  background: #ff3366;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+#capture:active {
+  opacity: 1;
 }
 
 /* プレビュー用取り直しボタンを画面下中央に固定 */
@@ -52,4 +56,3 @@
   font-size: 0.9em;
   color: #555;
 }
-
